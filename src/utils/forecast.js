@@ -11,7 +11,7 @@ const forecast = (latitude,longitude, callback) => {
         }else{
             callback(undefined,{
                 summary:body.currently.summary,
-                temprature:body.currently.temperature+"degree celsius",
+                temprature:body.currently.temperature+"* degree fahrenhiet",
                 rainchance:body.currently.precipProbability + "%"
             })
         }
