@@ -30,7 +30,12 @@ weatherForm.addEventListener("submit",(e)=>{
             // console.log(data.error)
         }else{
             messageOne.textContent=data.location
-            const weatherreport = data.forecast.summary + " " +data.forecast.temprature + " " + data.forecast.rainchance+" rain chance"
+            const weatherreport = data.forecast.summary+"\n"+
+            " , temperature : "+data.forecast.temprature +"* fahrenheit\n"+ 
+            " , rain chance : "+data.forecast.rainchance+" %\n"+
+            " , humidity : "+data.forecast.humidity+" %\n"+
+            " , windspeed : "+data.forecast.windspeed+" km/hr\n"+
+            " , forecast : "+data.forecast.expected
 
             messageTwo.textContent=weatherreport
             // console.log(data.location)
